@@ -87,7 +87,7 @@ body {
     $title_color: black;
     .center-content {
       position: absolute;
-      $color_list: #FF0033 #CC3333 #CCCC00 #00FF66 #00CC99;
+      $color_list: #CC0000 #FF9966 #FFCC33 #66CC99 #66FF99;
       @for $index from 1 through 5 {
         a > .item-#{$index} {
           float: left;
