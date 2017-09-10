@@ -1,0 +1,56 @@
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  .parent-content {
+    text-align: center;
+    margin: 15% 45%;
+    position: relative;
+    transform-style: preserve-3d;
+    //animation: spin 10s linear infinite;
+    transform: rotateX(30deg) rotateY(30deg);
+    $item_color: rgba(1, 1, 1, .8);
+    //$color_list: #ff4366 #fc9d9b #f9ccad #c9c8aa #84af9b;
+    @for $index from 1 through 6 {
+      .item-#{$index} {
+        width: 200px;
+        height: 200px;
+        float: left;
+        //background-color: nth($color_list,$index);
+        position: absolute;
+      }
+    }
+    .item-1 {
+      background-color: #ff4366;
+      transform: translateX(200px) rotateY(90deg) translateY(-140px);
+    }
+    .item-2 {
+      background-color: #fc9d9b;
+      transform: translateX(0px) rotateY(90deg) translateY(-140px);
+    }
+    .item-3 {
+      background-color: #f9ccad;
+      transform: translateZ(200px);
+    }
+    .item-4 {
+      background-color: #c9c8aa;
+      transform: rotateX(90deg) translateX(100px) translateZ(40px);
+    }
+    .item-5 {
+      background-color: #84af9b;
+      transform: rotateX(90deg) translatez(100px) translateY(100px);
+    }
+    .item-6 {
+      background-color: #0000ff;
+    }
+  }
+}

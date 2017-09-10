@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>总有一个在路上</title>
+    <link rel="stylesheet" href="../../css/travel/index.css">
+    <script src="../../js/travel/index.js"></script>
+</head>
+<body>
+<div>
+    <div class="bg"></div>
+    <div class="content">
+        <div class="title">
+            <span id="mainTitle" class="spin"></span>
+        </div>
+        <div id="space">
+            <div class="item" onclick="showDetailImg(1)">
+                <img src="" data-src="../../img/travel/test.jpg">
+                <span>山山</span>
+            </div>
+            <div class="item" onclick="showDetailImg(2)">
+                <img src=""  data-src="../../img/travel/test.jpg">
+                <span>水水</span>
+            </div>
+            <div class="item" onclick="showDetailImg(3)">
+                <img src=""  data-src="../../img/travel/test.jpg">
+                <span>无物</span>
+            </div>
+        </div>
+    </div>
+    <div id="closeDetail" style="display: none" onclick="closeDetail()">
+        <span>+</span>
+    </div>
+    <div id="book" style="display: none">
+        <div>5</div>
+        <div>4</div>
+        <div>3</div>
+        <div>2</div>
+        <div>1</div>
+    </div>
+</div>
+</body>
+</html>
