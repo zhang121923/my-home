@@ -121,7 +121,7 @@ body {
           &:hover {
             transform: translateY(-20px);
             transition: transform .5s linear;
-            background-color: nth($color_list, $index);
+            background-color: rgba(nth($color_list, $index),.8);
             span, span[class='content'] {
               color: white;
             }
