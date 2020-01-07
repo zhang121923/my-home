@@ -8,7 +8,7 @@ gulp.task('default','进入所有gulp任务',["index","production","travel"],fun
 });
 
 gulp.task('index',["gulp_index"],function(){
-	// 原本想打算打包的，哈哈
+
 });
 
 gulp.task('production',["gulp-production"],function(){
