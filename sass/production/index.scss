@@ -1,31 +1,101 @@
-body {
-  background-color: rgba(132, 175, 155, .4);
-  overflow: hidden;
-  #center{
-    position: absolute;
-    display: flex;
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  .production-content {
+    position: relative;
+    background-color: rgba(132, 175, 155, .4);
+    background-size: cover;
     width: 100%;
     height: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    a{
-      text-decoration: none;
-      .items{
-        background-color: #edffed;
-        margin-left: 10px;
-        width: 10em;
-        height: 10em;
-        border-radius: 50%;
-        border: 1px solid rgba(green,.6);
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        span{
-          font-size: 1.4em;
-          color: black;
+
+    .time-axies-line {
+      position: absolute;
+      top: 250px;
+      left: 200px;
+      width: 1500px;
+
+      .item {
+        display: inline-block;
+        position: relative;
+        width: 310px;
+        margin-bottom: 10em;
+
+        .item-point {
+
+          position: relative;
+          width: 20px;
+          height: 20px;
+          background-color: #2b542c;
+          border-radius: 50%;
+
+          &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 300px;
+            height: 1px;
+            background-color: #0f0f0f;
+            top: calc(10px - 2px / 2);
+            left: 20px;
+          }
+        }
+
+        .item-start {
+          &::before {
+            content: '开始';
+            position: absolute;
+            display: inline-block;
+            width: 40px;
+            top: -20px;
+            transform: translateX(calc(-50% + 10px));
+            text-align: center;
+          }
+        }
+
+        .item-end {
+          &::before {
+            content: '未曾离开';
+            position: absolute;
+            display: inline-block;
+            width: 80px;
+            top: -20px;
+            transform: translateX(calc(-50% + 10px));
+            text-align: center;
+          }
+
+          &::after {
+            content: none;
+          }
+        }
+
+        .item-content {
+          position: relative;
+
+          .item-content-time {
+            position: absolute;
+            top: -40px;
+            transform: translateX(calc(-50% + 10px));
+          }
+
+          .item-content-info {
+            position: absolute;
+            transform: translateX(calc(-50% + 10px));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .item-content-title {
+
+            }
+
+            .item-content-description {
+
+            }
+          }
         }
       }
     }
