@@ -9,7 +9,7 @@ app.controller('myCtrl', function ($scope) {
     // 菜单项
     $scope.menuList = [
         {
-            title: 'Jack zhang`s Blog',
+            title: 'hope`s Blog',
             content: '个人博客,写写记记,做一个进击的coder',
             href: 'http://zhang121923.coding.me/'
         }, {
