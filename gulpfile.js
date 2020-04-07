@@ -12,7 +12,7 @@ gulp.task('server', '进入所有gulp任务', ["index", "production", "travel"],
         },
         ghostMode: false
     });
-    gulp.watch(['./app/**', './sass/**', './index.html']).on('change', browserSync.reload);
+    gulp.watch(['./app/**', './sass/**', './index.html', './childPage/**']).on('change', browserSync.reload);
 });
 
 gulp.task('index', ["gulp_index"], function () {

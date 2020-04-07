@@ -37,6 +37,12 @@
                 url: 'https://zhang121923.github.io/'
             },
             {
+                time: '2018-05',
+                name: '图片轮播',
+                desc: '造造多种方法图片轮播轮子',
+                url: '../../../childPage/pictureCarousel/index.html'
+            },
+            {
                 time: '2019-02',
                 name: 'component-build',
                 desc: 'Angular构建一个特殊UI库',

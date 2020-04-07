@@ -168,7 +168,7 @@ html, body {
         }
       }
 
-      @for $i from 1 through 10 {
+      @for $i from 1 through 11 {
         .item:nth-of-type(#{$i}) {
           animation-delay: #{$i * 50}ms;
         }
