@@ -10,50 +10,19 @@
 </head>
 <body>
 <div class="production-content">
-    <a class="close" href="/">
+    <a class="close" href="/my-home">
         <div class="closeDetail">
             <span>+</span>
         </div>
     </a>
     <div class="time-axies-line">
         <!-- start -->
-        <div class="item">
+        <div id="insertPoint" class="item">
             <div class="item-point item-start"></div>
         </div>
 
         <!-- 模板 -->
-        <div class="item">
-            <div class="item-point"></div>
-            <div class="item-content">
-                <span class="item-content-time">2016-08-01</span>
-                <div class="item-content-info">
-                    <a class="item-content-title" href="./boxGame.html" target="_blank">找月亮小游戏</a>
-                    <small class="item-content-description">之前自己用Java Swing做过一版，现在用js重做一个页面版</small>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="item-point"></div>
-            <div class="item-content">
-                <span class="item-content-time">2016-09-01</span>
-                <div class="item-content-info">
-                    <a class="item-content-title" href="http://zhang121923.coding.me/picture-carousel/" target="_blank">图片轮播</a>
-                    <small class="item-content-description">造一个图片轮播的轮子</small>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="item-point"></div>
-            <div class="item-content">
-                <span class="item-content-time">2017-02-01</span>
-                <div class="item-content-info">
-                    <a class="item-content-title" href="../../../childPage/myFirstReact/index.html" target="_blank">
-                        react+kendo UI+echarts
-                    </a>
-                    <small class="item-content-description">初次尝试react</small>
-                </div>
-            </div>
-        </div>
+        <template id="timeTemplate"></template>
 
         <!-- etc -->
         <div class="item">
