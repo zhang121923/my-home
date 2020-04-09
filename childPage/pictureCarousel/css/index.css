@@ -9,7 +9,15 @@ html, body {
 }
 
 body {
-    background-color: rgba(102,255,153,.2)
+    background-color: rgba(102,255,153,.1)
+}
+
+.desc {
+    padding: 10px 20px;
+}
+
+.desc > small {
+    color: firebrick;
 }
 
 .content {
