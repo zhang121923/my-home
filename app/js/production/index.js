@@ -15,8 +15,8 @@
             {
                 time: '2016-09',
                 name: '图片轮播',
-                desc: '造一个图片轮播的轮子',
-                url: 'http://zhang121923.coding.me/picture-carousel/'
+                desc: '造造多种方法图片轮播轮子',
+                url: '../../../childPage/pictureCarousel/index.html'
             },
             {
                 time: '2017-02',
@@ -35,12 +35,6 @@
                 name: 'hexo',
                 desc: '搭建一个自己的blog',
                 url: 'https://zhang121923.github.io/'
-            },
-            {
-                time: '2018-05',
-                name: '图片轮播',
-                desc: '造造多种方法图片轮播轮子',
-                url: '../../../childPage/pictureCarousel/index.html'
             },
             {
                 time: '2019-02',
