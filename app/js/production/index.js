@@ -65,14 +65,14 @@
 
         // 执行插入
         var strBuffer = '';
-        timeNode.forEach(function (node) {
+        timeNode.forEach(function (node, index) {
             strBuffer += `
             <div class="item">
-                <div class="item-point"></div>
+                <div class="item-point iconfont item-point-${index + 1}">&#xe651;</div>
                 <div class="item-content">
                     <span class="item-content-time">${node.time}</span>
                     <div class="item-content-info">
-                        <a class="item-content-title" href="${node.url}" target="_blank">${node.name}</a>
+                        <a class="item-content-title" href="${node.url}" target="_blank"><strong>${node.name}</strong></a>
                         <small class="item-content-description">${node.desc}</small>
                     </div>
                 </div>
