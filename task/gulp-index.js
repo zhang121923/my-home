@@ -5,7 +5,7 @@ var gulpError = require("gulp-error");
 var minify = require("gulp-minify-css");
 
 var src_path = {
-    "sass": ["sass/index.scss"],
+    "sass": ["sass/*.scss"],
     // "js": ["js/index.js"]
 };
 

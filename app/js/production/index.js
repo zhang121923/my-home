@@ -7,49 +7,49 @@
         // 时间轴节点数据
     var timeNode = [
             {
-                time: '2016-08',
+                time: '2016年08月',
                 name: '找月亮小游戏',
                 desc: '之前自己用Java Swing做过一版，现在用js重做一个页面版',
                 url: './boxGame.html'
             },
             {
-                time: '2016-09',
+                time: '2016年09月',
                 name: '图片轮播',
                 desc: '造造多种方法图片轮播轮子',
                 url: '../../../childPage/pictureCarousel/index.html'
             },
             {
-                time: '2017-02',
+                time: '2017年02月',
                 name: 'react+kendo UI+echarts',
                 desc: '初次尝试react',
                 url: '../../../childPage/myFirstReact/index.html'
             },
             {
-                time: '2017-09',
+                time: '2017年09月',
                 name: 'my home',
                 desc: '搭建一个自己的静态网站',
                 url: 'https://zhang121923.github.io/my-home/'
             },
             {
-                time: '2018-01',
+                time: '2018年01月',
                 name: 'hexo',
                 desc: '搭建一个自己的blog',
                 url: 'https://zhang121923.github.io/'
             },
             {
-                time: '2019-02',
+                time: '2019年02月',
                 name: 'component-build',
                 desc: 'Angular构建一个特殊UI库',
                 url: 'https://github.com/zhang121923/component-build'
             },
             {
-                time: '2019-11',
+                time: '2019年11月',
                 name: 'electron-TODO',
                 desc: 'electron做了个仿window 10的To Do桌面程序',
                 url: 'https://github.com/zhang121923/electron-TODO'
             },
             {
-                time: '2020-03',
+                time: '2020年03月',
                 name: 'uni-clock',
                 desc: 'uni-app做一个仿华为闹钟应用',
                 url: 'https://github.com/zhang121923/uni-clock'
@@ -57,7 +57,6 @@
         ];
 
     window.onload = function () {
-
         // 插入节点
         var timeLine = document.querySelector('.time-axies-line');
         var insertPoint = document.querySelector('#insertPoint');
@@ -65,10 +64,10 @@
 
         // 执行插入
         var strBuffer = '';
-        timeNode.forEach(function (node, index) {
+        timeNode.forEach(function (node) {
             strBuffer += `
             <div class="item">
-                <div class="item-point iconfont item-point-${index + 1}">&#xe651;</div>
+                <div class="item-point iconfont">&#xe626;</div>
                 <div class="item-content">
                     <span class="item-content-time">${node.time}</span>
                     <div class="item-content-info">

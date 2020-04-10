@@ -4,7 +4,7 @@ var minify = require("gulp-minify-css");
 var autoPrefixer = require("gulp-autoprefixer");
 
 var src_path ={
-    "sass": ['sass/production/*.scss']
+    "sass": ['sass/production/**/*.scss']
 };
 
 var dest_path = {
