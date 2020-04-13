@@ -36,17 +36,21 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
+}
+
+body {
+  background:rgba(#da9a7d, .5) repeat fixed;
 
   .close {
     .closeDetail {
-      position: absolute;
+      position: fixed;
       z-index: 99999;
       width: 50px;
       cursor: pointer;
       height: 50px;
       text-align: center;
-      margin-top: 5%;
-      margin-left: 85%;
+      top: 5%;
+      right: 100px;
       border: 1px solid #fff;
       border-radius: 50%;
 
@@ -67,23 +71,22 @@ html, body {
 
   .production-content {
     position: relative;
-    background-color: rgba(#da9a7d, .5);
-    background-size: cover;
     width: 100%;
     height: 100%;
+    overflow: scroll;
 
     .time-axies-line {
       position: absolute;
       transform: translateX(-2000px);
       top: 10%;
       left: 200px;
-      width: 1500px;
+      width: 75%;
 
       .item {
         display: inline-block;
         transform: translateX(-2000px);
         position: relative;
-        width: 310px;
+        width: 280px;
         margin-right: .5em;
         margin-bottom: 10em;
         animation-name: showItem;
@@ -100,7 +103,7 @@ html, body {
             content: '';
             display: inline-block;
             position: absolute;
-            width: 300px;
+            width: 280px;
             height: 1px;
             background: linear-gradient(to right, #CD3333, #96CDCD);
             top: 50%;
@@ -125,6 +128,7 @@ html, body {
         .item-end {
           transform: translate(20px, calc((40px - 20px) / 2 / 2));
           z-index: 2;
+
           &::before {
             content: '未曾离开';
             position: absolute;
@@ -166,11 +170,11 @@ html, body {
             align-items: center;
 
             .item-content-title {
-                color: #48435a;
+              color: #48435a;
             }
 
             .item-content-description {
-                color: #455472;
+              color: #455472;
             }
           }
         }
@@ -180,6 +184,10 @@ html, body {
         .item:nth-of-type(#{$i}) {
           animation-delay: #{$i * 50}ms;
         }
+      }
+
+      .item-end-node {
+        width: 100px;
       }
     }
   }

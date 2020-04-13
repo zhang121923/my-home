@@ -85,7 +85,7 @@
         // 获取节点element元素
         var elements = template.content.children;
         // 插入
-        for (var i = elements.length - 1;  i >= 0; i--) {
+        for (var i = elements.length - 1; i >= 0; i--) {
             insertPoint.insertAdjacentElement('afterend', elements[i]);
         }
         // 删除template节点
