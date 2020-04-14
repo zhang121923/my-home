@@ -213,7 +213,7 @@ $title_color: #000000;
   }
 }
 
-@media (min-width: 320px) and (max-width: 979px) {
+@media (max-width: 979px) {
 
   body {
     background-color: rgba(var(--my-bg-color), .5);
@@ -381,7 +381,7 @@ $title_color: #000000;
               .iconfont {
                 font-size: 4rem;
                 font-weight: 300;
-                color: #0f0f0f;
+                color: #8B8989;
               }
             }
           }
@@ -412,12 +412,6 @@ $title_color: #000000;
             .content {
               color: #303030;
             }
-
-            .next-area {
-              .iconfont {
-                color: #8B8989;
-              }
-            }
           }
 
           .item-3 {
@@ -433,12 +427,6 @@ $title_color: #000000;
               color: #5C5C5C;
               padding: 1.067rem 1.333rem;
             }
-
-            .next-area {
-              .iconfont {
-                color: #8B8989;
-              }
-            }
           }
 
           .item-4 {
@@ -453,12 +441,6 @@ $title_color: #000000;
             .content {
               color: #5C5C5C;
             }
-
-            .next-area {
-              .iconfont {
-                color: #8B8989;
-              }
-            }
           }
 
           .item-5 {
@@ -472,12 +454,6 @@ $title_color: #000000;
 
             .content {
               color: #5C5C5C;
-            }
-
-            .next-area {
-              .iconfont {
-                color: #8B8989;
-              }
             }
           }
         }
