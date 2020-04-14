@@ -71,8 +71,10 @@ $title_color: #000000;
           }
 
           .intro_link {
+            margin-top: 0.8rem;
             span {
               margin-left: 5px;
+              font-size: 1.8rem;
 
               &:not(:nth-of-type(2)) {
                 cursor: pointer;
@@ -249,7 +251,7 @@ $title_color: #000000;
           text-align: center;
 
           .intro_link {
-            margin-top: 0.8rem;
+            margin-top: 1.333rem;
 
             span {
               margin-left: 5px;
@@ -464,7 +466,7 @@ $title_color: #000000;
 
             .title {
               color: #2a252c;
-            text-decoration: underline;
+              text-decoration: underline;
               text-shadow: 5px 5px 5px #C1CDC1;
             }
 
@@ -486,5 +488,4 @@ $title_color: #000000;
       }
     }
   }
-
 }
