@@ -28,13 +28,13 @@
                 time: '2017年09月',
                 name: 'my home',
                 desc: '搭建一个自己的静态网站',
-                url: 'https://zhang121923.github.io/my-home/'
+                url: 'http://www.xiaodoudou.xin/my-home/'
             },
             {
                 time: '2018年01月',
                 name: 'hexo',
                 desc: '搭建一个自己的blog',
-                url: 'https://zhang121923.github.io/'
+                url: 'http://www.xiaodoudou.xin/'
             },
             {
                 time: '2019年02月',
