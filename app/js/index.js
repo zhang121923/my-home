@@ -20,7 +20,7 @@ app.controller('myCtrl', function ($scope) {
         {
             title: 'hope`s Blog',
             content: '个人博客,写写记记,做一个进击的coder',
-            href: 'http://www.xiaodoudou.xin'
+            href: 'http://wfj9de.coding-pages.com/'
         }, {
             title: '爱生活，爱音乐',
             content: '小小的那么展示一下我才艺，哈哈',
