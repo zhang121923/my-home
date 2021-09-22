@@ -28,31 +28,37 @@
                 time: '2017年09月',
                 name: 'my home',
                 desc: '搭建一个自己的静态网站',
-                url: 'http://www.xiaodoudou.xin/my-home/'
+                url: 'http://www.xiaodoudou.xin'
             },
             {
                 time: '2018年01月',
                 name: 'hexo',
                 desc: '搭建一个自己的blog',
-                url: 'http://www.xiaodoudou.xin/'
+                url: 'https://blog.xiaodoudou.xin/'
             },
             {
                 time: '2019年02月',
-                name: 'component-build',
+                name: 'component-build(git)',
                 desc: 'Angular构建一个特殊UI库',
                 url: 'https://github.com/zhang121923/component-build'
             },
             {
                 time: '2019年11月',
-                name: 'electron-TODO',
+                name: 'electron-TODO(git)',
                 desc: 'electron做了个仿window 10的To Do桌面程序',
                 url: 'https://github.com/zhang121923/electron-TODO'
             },
             {
                 time: '2020年03月',
-                name: 'uni-clock',
+                name: 'uni-clock(git)',
                 desc: 'uni-app做一个仿华为闹钟应用',
                 url: 'https://github.com/zhang121923/uni-clock'
+            },
+            {
+                time: '2020年04月',
+                name: 'my-home-v2(git)',
+                desc: 'my-home主页整体重构，使用webpack+react+typescript架构搭建',
+                url: 'https://github.com/zhang121923/my-home-v2'
             }
         ];
 

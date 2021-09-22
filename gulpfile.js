@@ -1,28 +1,27 @@
-var gulp = require("gulp-help")(require("gulp"))
+var gulp = require('gulp-help')(require('gulp'))
 var src = require('require-dir');
 var browserSync = require('browser-sync').create();
+var addVersion = require('./build/suffixVersion.js');
 
-var dir = src("./task");
+var dir = src('./task');
 
-gulp.task('server', '进入所有gulp任务', ["index", "production", "travel"], function () {
+gulp.task('server', '进入所有gulp任务', ['gulp_index', 'gulp-production', 'gulp-travel', 'gulp-doudou', 'addVersion'], function () {
     browserSync.init({
         notify: false,
         server: {
-            baseDir: "./",
+            baseDir: './',
         },
         ghostMode: false
     });
     gulp.watch(['./app/**', './sass/**', './index.html', './childPage/**']).on('change', browserSync.reload);
 });
 
-gulp.task('index', ["gulp_index"], function () {
-
+//添加版本号
+gulp.task('addVersion', function () {
+    return gulp.src('./index.html')
+        .pipe(addVersion())
+        .pipe(gulp.dest('./'))
 });
 
-gulp.task('production', ["gulp-production"], function () {
-
-});
-
-gulp.task('travel', ["gulp-travel"], function () {
-
-});
+// 打包，加版本号
+gulp.task('build', ['addVersion']);

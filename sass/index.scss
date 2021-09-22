@@ -42,6 +42,22 @@ h2 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.busuanzi-count {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  font-weight: 600;
+  z-index: 2;
+
+  .site-uv {
+    display: block;
+  }
+
+  .site-pv {
+    display: block;
+  }
+}
+
 // 菜单颜色值
 $color_list: #CC0000 #FF9966 #FFCC33 #66CC99 #66FF99;
 
@@ -72,9 +88,10 @@ $title_color: #000000;
 
           .intro_link {
             margin-top: 0.8rem;
+
             span {
               margin-left: 5px;
-              font-size: 1.8rem;
+              font-size: 1.067rem;
 
               &:not(:nth-of-type(2)) {
                 cursor: pointer;
@@ -149,6 +166,7 @@ $title_color: #000000;
         a {
           width: 20%;
           height: 100%;
+          text-decoration: none;
 
           @for $index from 1 through 5 {
             & > .item-#{$index} {
@@ -171,7 +189,8 @@ $title_color: #000000;
                 position: relative;
                 margin-top: 80%;
                 font-size: 2em;
-                font-weight: 600;
+                font-weight: 500;
+                color: #707070;
               }
 
               .content {
@@ -216,8 +235,6 @@ $title_color: #000000;
 @media (max-width: 979px) {
 
   body {
-    background-color: rgba(var(--my-bg-color), .5);
-    background-attachment: fixed;
     overflow-y: hidden;
 
     .info-toggle {
@@ -228,7 +245,7 @@ $title_color: #000000;
       z-index: 100;
 
       .iconfont {
-        font-size: 2.667rem;
+        font-size: 2.133rem;
         font-weight: 600;
         color: #ffffff;
       }
@@ -238,12 +255,13 @@ $title_color: #000000;
       position: relative;
       width: 100%;
       height: 100%;
-      z-index: 10;
+      background-color: #737373;
+      z-index: 50;
 
       .info-desc {
         width: 100%;
         height: 100%;
-        background-color: rgba(#737373, .3);
+
 
         .header_title {
           width: 100%;
@@ -282,9 +300,9 @@ $title_color: #000000;
           p {
             text-align: center;
             line-height: 2;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 1.2em;
-            color: rgba(100, 100, 100, 0.8);
+            color: #000000;
           }
         }
 
@@ -316,6 +334,7 @@ $title_color: #000000;
       width: 100%;
       height: 100%;
       z-index: 2;
+      overflow: hidden;
 
       .global-title {
         position: absolute;
@@ -331,25 +350,24 @@ $title_color: #000000;
       }
 
       .center-content {
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        overflow: hidden;
 
         a {
-          position: absolute;
-          top: 0;
-          left: 0;
           display: block;
           width: 100%;
           height: 100%;
-          z-index: 0;
+          text-decoration: none;
+          background-repeat: no-repeat;
+          background-size: cover;
 
           .item {
+            position: relative;
             width: 100%;
             height: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -358,37 +376,13 @@ $title_color: #000000;
             .title {
               font-weight: 600;
             }
-
-            .next-area {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              position: absolute;
-              width: 100%;
-              left: 50%;
-              bottom: 8%;
-              transform: translate(-50%, 0);
-              animation-name: heartBeat;
-              animation-iteration-count: infinite;
-              animation-duration: 3s;
-              animation-timing-function: linear;
-
-              .next-area-desc {
-                color: #737373;
-              }
-
-              .iconfont {
-                font-size: 4rem;
-                font-weight: 300;
-                color: #8B8989;
-              }
-            }
           }
+        }
+
+        .kind-item-1 {
+          background-image: url("../../img/1.jpg");
 
           .item-1 {
-            background-image: url("../../img/1.jpg");
-
             .title {
               color: #EEE0E5;
               text-decoration: underline;
@@ -399,23 +393,29 @@ $title_color: #000000;
               color: #EEE0E5;
             }
           }
+        }
+
+        .kind-item-2 {
+          background-image: url("../../img/2.jpeg");
 
           .item-2 {
-            background-image: url("../../img/2.jpeg");
 
             .title {
-              color: #F8F8FF;
+              color: #ffffff;
               text-decoration: underline;
               text-shadow: 1px 2px 2px #E0EEE0;
             }
 
             .content {
-              color: #303030;
+              color: #ffffff;
             }
           }
+        }
+
+        .kind-item-3 {
+          background-image: url("../../img/3.jpg");
 
           .item-3 {
-            background-image: url("../../img/3.jpg");
 
             .title {
               color: #CD8162;
@@ -428,9 +428,12 @@ $title_color: #000000;
               padding: 1.067rem 1.333rem;
             }
           }
+        }
+
+        .kind-item-4 {
+          background-image: url("../../img/4.jpg");
 
           .item-4 {
-            background-image: url("../../img/4.jpg");
 
             .title {
               color: #CD5C5C;
@@ -442,9 +445,12 @@ $title_color: #000000;
               color: #5C5C5C;
             }
           }
+        }
+
+        .kind-item-5 {
+          background-image: url("../../img/5.jpeg");
 
           .item-5 {
-            background-image: url("../../img/5.jpeg");
 
             .title {
               color: #2a252c;
@@ -457,10 +463,46 @@ $title_color: #000000;
             }
           }
         }
+      }
 
-        .kind-item-1 {
-          z-index: 1;
+      .next-area {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        left: 50%;
+        bottom: 8%;
+        z-index: 5;
+        transform: translate(-50%, 0);
+        animation-name: heartBeat;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+
+        .next-area-desc {
+          color: #737373;
         }
+
+        .iconfont {
+          font-size: 2.133rem;
+          font-weight: 300;
+          color: #8B8989;
+        }
+      }
+    }
+
+    .busuanzi-count {
+      font-weight: 300;
+      font-size: 14px;
+
+      .site-uv {
+        display: block;
+      }
+
+      .site-pv {
+        display: block;
       }
     }
   }

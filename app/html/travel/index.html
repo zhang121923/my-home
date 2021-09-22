@@ -2,42 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>总有一个在路上</title>
+    <title>心在路上</title>
+    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+    <meta name="referrer" content="never">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <link rel="stylesheet" href="../../css/travel/index.css">
-    <script src="../../js/travel/index.js"></script>
 </head>
 <body>
-<div>
-    <div class="bg"></div>
-    <div class="content">
-        <div class="title">
-            <span id="mainTitle" class="spin"></span>
-        </div>
-        <div id="space">
-            <div class="item" onclick="showDetailImg(1)">
-                <img src="" data-src="../../img/travel/test.jpg">
-                <span>山山</span>
-            </div>
-            <div class="item" onclick="showDetailImg(2)">
-                <img src=""  data-src="../../img/travel/test.jpg">
-                <span>水水</span>
-            </div>
-            <div class="item" onclick="showDetailImg(3)">
-                <img src=""  data-src="../../img/travel/test.jpg">
-                <span>无物</span>
-            </div>
-        </div>
+<div class="travel-content">
+    <div class="page-desc">
+        <h3>人生不就是旅行嘛</h3>
+        <p>
+            <small>记得小时候电视机里某广告印象很深刻：</small>
+            <small class="page-desc-ad">人生就像一场旅行，不必在乎目的地，在乎的只是沿途的风景，以及看风景的心情。</small>
+        </p>
     </div>
-    <div id="closeDetail" style="display: none" onclick="closeDetail()">
-        <span>+</span>
-    </div>
-    <div id="book" style="display: none">
-        <div>5</div>
-        <div>4</div>
-        <div>3</div>
-        <div>2</div>
-        <div>1</div>
+    <div class="photo-wall">
+        <ul class="photo-wall-content">
+
+        </ul>
     </div>
 </div>
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="../../js/travel/index.js"></script>
+<!--百度站长-->
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https'){
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else{
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 </body>
 </html>

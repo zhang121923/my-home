@@ -5,6 +5,8 @@ var imgNav = document.getElementById("imgNav");
 var imgs = document.getElementsByClassName("img-item");
 var imgNavs = document.getElementsByClassName("img-nav");
 var imgLen = imgs.length;
+// nav 元素的长度
+var navElementWidth;
 var runFlag = false;
 var navInterval = null;
 // 当前播放到第几个图片
@@ -62,7 +64,7 @@ function changeTo(index) {
         runFlag = false;
     }
     navInterval = window.setInterval(function () {
-        if (curWidth >= 40) {
+        if (curWidth >= navElementWidth) {
             setTimeout(showImg, 0);
             clearInterval(navInterval)
         } else {
@@ -90,11 +92,12 @@ function runAuto() {
 
 function showImg() {
     // 偏移量
-    var offset = curIndex === imgLen ? 0 : -400 * curIndex;
-    imgArea.style.top = offset + 'px';
+    var offset = curIndex === imgLen ? 0 : -100 * curIndex;
+    imgArea.style.top = offset + '%';
 }
 
 window.onload = function () {
-    imgNavs[0].children[0].style.width = '40px';
+    navElementWidth = imgNavs[0].clientWidth;
+    imgNavs[0].children[0].style.width = navElementWidth + 'px';
     runAuto();
 }

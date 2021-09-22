@@ -21,6 +21,7 @@ html, body {
     position: relative;
     height: 100%;
     width: 10%;
+    z-index: 100;
     float: left;
     display: flex;
     flex-direction: column;
@@ -47,12 +48,12 @@ html, body {
 
 #center > .img-list {
     position: relative;
+    width: 60%;
+    height: 40%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
-    width: 800px;
-    height: 400px;
     overflow-y: hidden;
 }
 
@@ -72,35 +73,53 @@ html, body {
 #center > .img-list > #imgUl > li {
     display: inline-block;
     padding: 0;
-    width: 800px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
 #center > .img-list > #imgUl > li > img {
-    width: 800px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     background-size: cover;
 }
 
 
 #imgNav {
     position: absolute;
-    bottom: 10px;
     left: 50%;
+    bottom: 1.333rem;
+    width: 100%;
+    height: 1.333rem;
     transform: translateX(-50%);
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-nav {
     display: flex;
-    float: left;
-    margin-left: 20px;
-    width: 40px;
-    height: 5px;
     background-color: #f4ffe8;
     opacity: .5;
     cursor: pointer;
+}
+
+@media (min-width: 980px) {
+    .img-nav {
+        width: 40px;
+        height: 5px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 980px) {
+    .img-nav {
+        width: 20px;
+        height: 5px;
+        margin-left: 10px;
+    }
 }
 
 .img-nav > span {

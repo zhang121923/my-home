@@ -10,11 +10,6 @@ html, body {
     height: 100%;
 }
 
-img {
-    width: 100%;
-    height: 400px;
-}
-
 #center {
     position: relative;
     float: left;
@@ -28,6 +23,7 @@ img {
     width: 10%;
     float: left;
     display: flex;
+    z-index: 100;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -52,35 +48,63 @@ img {
 
 #center > #imgUl {
     position: absolute;
+    width: 60%;
+    height: 40%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
-    width: 800px;
-    height: 400px;
+}
+
+#imgUl > .img-item {
+    width: 100%;
+    height: 100%;
+}
+
+.img-item > img {
+    width: 100%;
+    height: 100%;
 }
 
 #imgNav {
     position: absolute;
-    bottom: 10px;
     left: 50%;
+    bottom: 10px;
+    width: 100%;
     transform: translateX(-50%);
     list-style: none;
-}
-
-.img-nav {
-    float: left;
-    margin-left: 20px;
-    width: 20px;
-    height: 5px;
-    background-color: #f4ffe8;
-    opacity: .5;
-    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #center #imgUl > li {
     list-style: none;
     position: absolute;
+}
+
+.img-nav {
+    margin-left: 10px;
+    z-index: 100;
+    background-color: #f4ffe8;
+    opacity: .5;
+    cursor: pointer;
+}
+
+@media (min-width: 980px) {
+    .img-nav {
+        width: 20px;
+        height: 5px;
+    }
+}
+
+@media (max-width: 979px) {
+    .img-nav {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
 }
 
 .selected {

@@ -4,35 +4,46 @@ app.controller('myCtrl', function ($scope) {
     $scope.state = {
         isActiveAbout: false,
         isActiveIntro: false,
-        isShowDesc: false
+        isShowDesc: false,
+        pageNum: 1 // 初始页数是1
     };
 
-    // temp
-    var screenWidth = document.documentElement.clientWidth;
-    if (screenWidth < 980) {
-        document.querySelector('.header-visible').style.display = 'none';
-    } else {
-        document.querySelector('.header-visible').style.display = 'block';
-    }
+    // 监听DOM完成
+    $scope.$watch('$viewContentLoaded', function () {
+        var screenWidth = document.documentElement.clientWidth;
+        if (screenWidth < 980) {
+            document.querySelector('.header-visible').style.display = 'none';
+
+            // 移动端禁止滚动页面
+            document.documentElement.addEventListener('touchmove', function (e) {
+                e.preventDefault();
+            }, false);
+            document.querySelector('.center-content').addEventListener('touchmove', function (e) {
+                e.preventDefault();
+            }, false)
+        } else {
+            document.querySelector('.header-visible').style.display = 'block';
+        }
+    })
 
     // 菜单项
     $scope.menuList = [
         {
             title: 'hope`s Blog',
             content: '个人博客,写写记记,做一个进击的coder',
-            href: 'http://wfj9de.coding-pages.com/'
+            href: 'http://blog.xiaodoudou.xin/'
         }, {
             title: '爱生活，爱音乐',
-            content: '小小的那么展示一下我才艺，哈哈',
-            href: ''
+            content: '还记得犬夜叉里《穿越时空的思念》吗?',
+            href: './app/html/doudou/index.html'
         }, {
             title: '新的旅途',
-            content: 'You can either travel or read,but either your body or soul must be on the way。这里我选择身体在路上，鄙人不会拍照，仅仅作为留念',
+            content: 'You can either travel or read,but either your body or soul must be on the way。仅仅作为留念',
             href: './app/html/travel/index.html'
         }, {
             title: '随笔',
             content: '小时候听大人说写日记是为以后怀念过去的',
-            href: ''
+            href: 'https://blog.xiaodoudou.xin/categories/%E9%9A%8F%E7%AC%94/'
         }, {
             title: '小作品',
             content: '有时并不知道自己这么能创造',
@@ -74,22 +85,16 @@ app.controller('myCtrl', function ($scope) {
          * 下页逻辑
          * @param index
          */
-        nextPage: function (index, e) {
+        nextPage: function (e) {
             e.preventDefault();
-            // 页码
-            var pageNum = index = index === 4 ? 0 : index + 1;
-            // 获取将要展示的页面element
-            var nextIndex = pageNum + 1;
-            var next = document.querySelector('.kind-item-' + nextIndex);
-            // 所有的页集合
-            var pages = document.querySelectorAll('.page-item');
-            Array.prototype.forEach.call(pages, function (item, i) {
-                if(i === index) {
-                    item.style.zIndex = '5';
-                }else {
-                    item.style.zIndex = '0';
-                }
-            });
+            // 获取第一个a page页，根据偏移量设置其绝对位置，下面的元素会自动上下移
+            var item1 = document.querySelector('.center-content');
+            // 计算偏移量，pageNum从1开始，所以偏移量是- pageNum * 100%,
+            // 当pageNum === $scope.menuList.length时，返回第一页，即偏移量回复0
+            var offsetY = $scope.state.pageNum === $scope.menuList.length ? 0 : -$scope.state.pageNum * 100;
+            item1.style.top = offsetY + '%';
+            // 更改pageNum
+            $scope.state.pageNum = $scope.state.pageNum === $scope.menuList.length ? 1 : ++$scope.state.pageNum;
         }
     }
 });

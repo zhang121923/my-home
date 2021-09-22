@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>记忆小游戏</title>
+    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="../../css/production/boxGame.css">
-    <script src="../../js/production/boxGame.js"></script>
+    <link rel="stylesheet" href="../../css/index/iconfont.css">
 </head>
 <body>
-<a id="close" href="./index.html">
-    <div id="closeDetail" onclick="closeDetail()">
-        <span>+</span>
-    </div>
-</a>
-<div id="layout" style="display: none"></div>
+<a class="close iconfont" href="/">&#xe61a;</a>
+<div id="layout" style="display: none">
+    <strong id="timeClock"></strong>
+</div>
 <div id="content">
     <h3>找到所有的月亮你就过关了哦！！</h3>
 </div>
@@ -20,5 +20,6 @@
     <img src="../../img/production/boxGame/ok.ico">
     <h2>恭喜！你过关了！</h2>
 </div>
+<script src="../../js/production/boxGame.js"></script>
 </body>
 </html>
